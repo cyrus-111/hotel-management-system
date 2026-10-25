@@ -1,0 +1,6 @@
+{
+  "name": "Hartwell — Boutique Country Hotel Reservation System",
+  "description": "A boutique country hotel reservation and estate management system for Hartwell in the English countryside, featuring rooms, guests, multi-room reservations, Indian Rupee (₹) accounting, reports, and Flask + PostgreSQL source export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

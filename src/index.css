@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-cream: #FBF7F0;
+    --bg-sand: #EFE8DC;
+    --bg-card: #FFFFFF;
+    --border-warm: #E2D9C8;
+    --rust-primary: #8B3E1F;
+    --rust-hover: #6E2F15;
+    --olive-accent: #5C6446;
+    --text-dark: #2B2620;
+    --text-muted: #6E655B;
+  }
+
+  body {
+    background-color: #FBF7F0;
+    color: #2B2620;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, .font-serif-editorial {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@media print {
+  @page {
+    margin: 14mm;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-container,
+  .print-container * {
+    visibility: visible !important;
+  }
+
+  .print-container {
+    position: absolute !important;
+    inset: 0 auto auto 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+    gap: 8mm !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .print-container {
+    box-shadow: none !important;
+    border: none !important;
+    background: #FFFFFF !important;
+  }
+
+  .print-report {
+    break-inside: auto;
+    page-break-inside: auto;
+    background: #FFFFFF !important;
+    border: 1px solid #999999 !important;
+    border-radius: 0 !important;
+    padding: 5mm !important;
+    margin: 0 !important;
+    color: #000000 !important;
+  }
+
+  .print-report .overflow-x-auto {
+    overflow: visible !important;
+  }
+
+  .print-report table {
+    width: 100% !important;
+    font-size: 9pt !important;
+  }
+
+  .print-report thead {
+    display: table-header-group;
+  }
+
+  .print-report tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-report th,
+  .print-report td {
+    color: #000000 !important;
+    border-color: #BBBBBB !important;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #000000 !important;
+  }
+
+  * {
+    -webkit-print-color-adjust: economy;
+    print-color-adjust: economy;
+  }
+}
